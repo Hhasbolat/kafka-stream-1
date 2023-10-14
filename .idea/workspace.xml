@@ -64,10 +64,17 @@
       <recent name="$PROJECT_DIR$/kafka-stream" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.KStreamApplication">
+    <configuration name="KStreamApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kafka-stream" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.poc.kafka.KStreamApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KStreamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="KStream" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.moneypay.KStream.KStreamApplication" />
+      <module name="kafka-stream" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.poc.kafka.KStreamApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697232536695</updated>
-      <workItem from="1697232537924" duration="4808000" />
+      <workItem from="1697232537924" duration="5231000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
