@@ -1,4 +1,4 @@
-package com.poc.kafka.config;
+package com.poc.kafka.processor;
 
 import com.poc.kafka.model.BankResponse;
 import com.poc.kafka.model.BankTransaction;

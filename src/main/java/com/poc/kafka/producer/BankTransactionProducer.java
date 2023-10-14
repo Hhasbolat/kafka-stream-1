@@ -1,4 +1,4 @@
-package com.poc.kafka.config;
+package com.poc.kafka.producer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.poc.kafka.model.BankResponse;
 import java.util.List;

@@ -20,7 +20,7 @@ public class ApiController {
 
     private final StreamsBuilderFactoryBean factoryBean;
 
-    @GetMapping("/count/{bankCode}")
+    @GetMapping("/percentage/{bankCode}")
     public Double getWordCount(@PathVariable Long bankCode) {
 
         KafkaStreams kafkaStreams = factoryBean.getKafkaStreams();
