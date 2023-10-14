@@ -1,7 +1,7 @@
 package com.poc.kafka.config;
 
-import com.moneypay.KStream.model.BankResponse;
-import com.moneypay.KStream.model.BankTransaction;
+import com.poc.kafka.model.BankResponse;
+import com.poc.kafka.model.BankTransaction;
 import java.time.Duration;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.common.serialization.Serdes;

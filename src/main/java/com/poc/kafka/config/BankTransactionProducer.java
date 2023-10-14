@@ -1,6 +1,6 @@
 package com.poc.kafka.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.moneypay.KStream.model.BankResponse;
+import com.poc.kafka.model.BankResponse;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
