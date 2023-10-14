@@ -22,7 +22,7 @@ import org.springframework.kafka.support.serializer.JsonSerde;
 
 @Slf4j
 @Configuration
-public class KafkaItemStreamOne {
+public class KafkaBankResponseProcessor {
 
     @Bean
     public KStream<String, BankTransaction> kStreamItem(StreamsBuilder builder) {
