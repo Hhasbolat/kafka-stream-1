@@ -1,4 +1,4 @@
-package com.moneypay.KStream.config;
+package com.poc.kafka.config;
 
 import com.moneypay.KStream.model.BankResponse;
 import com.moneypay.KStream.model.BankTransaction;

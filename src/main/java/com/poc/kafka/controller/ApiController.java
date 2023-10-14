@@ -1,6 +1,6 @@
-package com.moneypay.KStream.controller;
+package com.poc.kafka.controller;
 
-import com.moneypay.KStream.model.BankTransaction;
+import com.poc.kafka.model.BankTransaction;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StoreQueryParameters;

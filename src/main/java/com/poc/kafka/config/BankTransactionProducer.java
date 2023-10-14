@@ -1,5 +1,4 @@
-package com.moneypay.KStream.config;
-
+package com.poc.kafka.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.moneypay.KStream.model.BankResponse;
 import java.util.List;

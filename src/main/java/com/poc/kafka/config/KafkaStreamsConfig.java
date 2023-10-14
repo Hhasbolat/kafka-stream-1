@@ -1,4 +1,4 @@
-package com.moneypay.KStream.config;
+package com.poc.kafka.config;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.common.serialization.Serdes;

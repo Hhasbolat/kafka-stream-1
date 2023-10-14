@@ -1,4 +1,4 @@
-package com.moneypay.KStream.model;
+package com.poc.kafka.model;
 
 import java.util.Date;
 import lombok.AllArgsConstructor;
