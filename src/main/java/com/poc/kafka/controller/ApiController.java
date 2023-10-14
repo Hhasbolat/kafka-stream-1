@@ -6,6 +6,7 @@ import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StoreQueryParameters;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
 import org.apache.kafka.streams.state.ReadOnlyKeyValueStore;
+import org.apache.kafka.streams.state.ReadOnlyWindowStore;
 import org.springframework.kafka.config.StreamsBuilderFactoryBean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,11 +25,11 @@ public class ApiController {
 
         KafkaStreams kafkaStreams = factoryBean.getKafkaStreams();
 
-        ReadOnlyKeyValueStore<Long, BankTransaction> counts = kafkaStreams.store(
-            StoreQueryParameters.fromNameAndType("counts", QueryableStoreTypes.keyValueStore())
+        ReadOnlyWindowStore<Long, BankTransaction> counts = kafkaStreams.store(
+            StoreQueryParameters.fromNameAndType("counts", QueryableStoreTypes.windowStore())
         );
 
-        BankTransaction order = counts.get(bankCode);
+        BankTransaction order = counts.fetch(bankCode, 20L);
         double percentage = (double) (order.getSuccessItems() * 100) / order.getTotalItems();
         return percentage;
     }
