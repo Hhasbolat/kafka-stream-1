@@ -45,7 +45,7 @@ public class KafkaBankResponseProcessor {
                            .withValueSerde(bankTransactionJsonSerde))
 
             .toStream()
-            .peek((key, value) -> log.info("Banka şuanda bu idli kayıtları okuyor.. bank code: {}: ", value.getBankCode()));
+            .peek((key, value) -> log.info("Banka kayıtları okunuyor.. bank code: {}: ", value.getBankCode()));
 
         KStream<String, BankTransaction> map = stream.map((key, value) -> KeyValue.pair(key.key(), value));
 

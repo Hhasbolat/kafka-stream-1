@@ -3,6 +3,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.poc.kafka.model.BankResponse;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Stream;
 import lombok.SneakyThrows;
@@ -74,16 +75,23 @@ public class BankTransactionProducer {
 
         while (true) {
             Thread.sleep(5000L);
+            String randomString = generateRandomStringGivenInput();
             Stream.of(BankResponse.builder()
                           .bankCode(4L)
                           .id(UUID.randomUUID().toString())
-                          .status("SUCCESS")
+                          .status(randomString)
                           .build())
                 .peek(t -> log.info("Sending new Transaction: {}", t))
-                .map(t -> new ProducerRecord<>("a", t.getBankCode().toString(), toJson(t)))
+                .map(t -> new ProducerRecord<>("bank-response", t.getBankCode().toString(), toJson(t)))
                 .forEach(record -> send(bankTransactionProducer, record));
         }
 
+    }
+
+    private static String generateRandomStringGivenInput()  {
+        String input1 = "SUCCESS";
+        String input2 = "FAIL";
+        return new Random().nextBoolean() ? input1 : input2;
     }
 
     @SneakyThrows
